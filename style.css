@@ -437,7 +437,7 @@ input:last-of-type {
 }
 
 .brush {
-    background-image: url(https://imgur.com/qHm6jkC.png);
+    background-image: url(./pics/brush.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -445,7 +445,7 @@ input:last-of-type {
     width: 900px;
     height: 600px;
     top: -50px;
-    left: -120px;
+    left: -90px;
     z-index: -1;
     animation: fade-width 1s linear forwards;
 }
@@ -460,7 +460,7 @@ input:last-of-type {
     }
     100%{
         opacity: 1;
-        transform: translateX(-120px);
+        transform: translateX(-90px);
     }
     
 }
