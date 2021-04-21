@@ -12,6 +12,33 @@ document.getElementById('scroll-icon').addEventListener('click', function() {
 //     });
 // });
 
+function bright(){
+    // Get HTML head element
+    var head = document.getElementsByTagName('HEAD')[0]; 
+  
+    // Create new link Element
+    var link = document.createElement('link');
+
+    // set the attributes for link element 
+    link.rel = 'stylesheet';   
+    link.href = 'style.css';
+    // Append link element to HTML head
+    head.appendChild(link);
+}
+function dark(){
+    // Get HTML head element
+    var head = document.getElementsByTagName('HEAD')[0]; 
+  
+    // Create new link Element
+    var link = document.createElement('link');
+
+    // set the attributes for link element 
+    link.rel = 'stylesheet';
+    link.href = 'style_dark.css';
+    // Append link element to HTML head
+    head.appendChild(link); 
+}
+
 function scrollDown() {
     scrollCount += 25;
     if (window.pageYOffset < document.getElementById('hero').clientHeight) {
@@ -23,14 +50,21 @@ function scrollDown() {
 };
 
 window.onscroll = function() {
-    if (window.pageYOffset > 500) {
+    if (window.pageYOffset > 500 && window.pageYOffset < 700) {
         document.getElementById('col-left').classList.add('fade-in-left')
         window.setTimeout(function() {
-            document.getElementById('col-right').classList.add('fade-in-bottom')
+            document.getElementById('calculator').classList.add('fade-in-bottom')
+        }, 500)
+    }
+    else if (window.pageYOffset > 1500 && window.pageYOffset < 1700) {
+        document.getElementById('col-right2').classList.add('fade-in-right')
+        window.setTimeout(function() {
+            document.getElementById('col-left').classList.add('fade-in-bottom')
         }, 500)
     }
 }
 
+// Calculator
 document.getElementById("size").disabled = true;
 function select(){
     var selected = document.getElementById("selector-cal").value;
@@ -137,3 +171,4 @@ function calculate(){
     document.getElementById("calculated-fund").innerHTML = 'ต้นทุน: ' + fund + unit_fund;
     document.getElementById("calculated-save").innerHTML = 'ประหยัด: ' + save + unit_save;
 }
+// -- //
