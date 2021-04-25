@@ -86,4 +86,6 @@
     <path d="M795,200 v90 c 0,5 10,5 10,0 v-90" fill="#57585B"/>
     <ellipse cx="800" cy="180" rx="20" ry="60" fill="#30B468" stroke-width="2" />
     <!-- <rect fill="url(#isometric)" height="1000" width="1000" /> -->
+    <circle cx="100" cy="100" r="50" fill="#30B468" />
+    <path d="M100, 130 l0,0 3,-25 h-20 l0,0 20,-35 l0,0 -3,23 h20" stroke="none" fill="white" />
 </svg>
