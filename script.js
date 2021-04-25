@@ -57,9 +57,9 @@ window.onscroll = function() {
         }, 500)
     }
     else if (window.pageYOffset > 1500 && window.pageYOffset < 1700) {
-        document.getElementById('col-right2').classList.add('fade-in-right')
+        document.getElementById('col-right').classList.add('fade-in-right')
         window.setTimeout(function() {
-            document.getElementById('col-left').classList.add('fade-in-bottom')
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
 }
