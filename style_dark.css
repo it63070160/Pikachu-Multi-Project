@@ -69,6 +69,7 @@ button:hover {
 .dropdown {
     display: inline-block;
     position: fixed;
+    padding-top: 10px;
     right: 2%;
     z-index: 1;
 }
@@ -137,7 +138,6 @@ button:hover {
 .section {
     padding: 0px 200px 100px 0px;
     box-sizing: border-box;
-    background-color: #000;
     min-height: 100vh;
     display: flex;
     width: 100%;
@@ -145,11 +145,19 @@ button:hover {
     align-items: center;
     overflow: hidden;
 }
+
+#page2 {
+    background-image: linear-gradient(to top right, #01072C,black);
+}
+
+#page3 {
+    background-image: linear-gradient(to bottom right, #01072C,black);
+}
 /* ----- */
 
 .hero {
     height: 100vh;
-    background-color: #000;
+    background-image: linear-gradient(to bottom right, #01072C,black);
     position: relative;
     background-size: cover;
     z-index: 1;
@@ -182,6 +190,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-image: radial-gradient(#01072C,black);
 }
 
 .description {
@@ -252,7 +261,7 @@ button:hover {
     position: absolute;
     width: 40%;
     height: 40%;
-    left: -50%;
+    left: -45%;
     right: 0;
     top: 0;
     bottom: 0;
@@ -324,68 +333,6 @@ button:hover {
     }
 }
 
-@media (max-width:1000px) {
-    h2 {
-        font-size: 2rem;
-    }
-    h1 {
-        font-size: 2.5rem;
-    }
-    .fa-angle-double-down {
-        font-size: 2rem;
-    }
-    .section {
-        flex-flow: column;
-        background-color: #000;
-        justify-content: center;
-        padding-left: 100px;
-        padding-right: 100px;
-        padding-top: 50px;
-    }
-    .col-left {
-        padding-left: 0px;
-    }
-    .description {
-        width: 100%;
-    }
-    .col-right {
-        margin-left: 0;
-        width: 90%;
-        margin-top: 50px;
-    }
-    .calculator {
-        margin-left: 100px;
-    }
-}
-
-@media (max-width:680px) {
-    .section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .hero-content {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: 100px;
-    }
-    .calculator {
-        left: 0px;
-    }
-    .col-right {
-        padding-left: 100px;
-    }
-}
-
-@media (max-height:600px) {
-    .hero-content {
-        top: 0;
-        margin-top: 50px;
-    }
-    .calculator {
-        left: 0px;
-    }
-}
-
 /* css animation text */
 
 .rw-sentence>.rw-words.rw-words-1>span {
@@ -399,27 +346,12 @@ button:hover {
     background-repeat: no-repeat;
     position: absolute;
     margin: auto;
-    width: 900px;
-    height: 600px;
+    width: 0px;
+    height: 0px;
     top: -50px;
     left: -90px;
     z-index: -1;
-    animation: fade-width 1s linear forwards;
-}
-
-@keyframes fade-width {
-    0%{
-        opacity: 0;
-        transform: translateX(-1000px);
-    }
-    50%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(-90px);
-    }
-    
+    opacity: 0;
 }
 
 .ooo {
@@ -676,17 +608,17 @@ option {
 
 
 .solar-house {
-    position: relative;
+    position: absolute;
     width: 900px;
     height: 900px;
     top: 14.5%;
     left: 47.5%;
     background-image: url(./pics/solar_nigth_ver.svg);
     background-repeat: no-repeat;
-    animation: fade-width2 1s linear forwards;
+    animation: fade-house 1s linear forwards;
 }
 
-@keyframes fade-width2 {
+@keyframes fade-house {
     0%{
         opacity: 0;
         transform: translateX(1000px);
@@ -696,23 +628,102 @@ option {
     }
     100%{
         opacity: 1;
-        transform: translate(50px, 100px);
+        transform: translateX(0);
     }
     
 }
-@media (max-width:1000px) {
-    @keyframes fade-width2 {
-        0%{
-            opacity: 0;
-            transform: translateX(1000px);
-        }
-        50%{
-            opacity: 0.5;
-        }
-        100%{
-            opacity: 1;
-            transform: translate(-470px,150px) scale(0.8);
-        }
-        
+@media (min-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .rw-words2 {
+        font-size: 1.3rem;
+    }
+    .solar-house {
+        width: 600px;
+        height: 600px;
+        top: 50%;
+        left: 20%;
+    }
+    .section {
+        flex-flow: column;
+        justify-content: center;
+        padding-left: 50px;
+        padding-right: 100px;
+        padding-top: 50px;
+    }
+    .calculator {
+        justify-content: center;
+        left: 5%;
+    }
+}
+
+@media (min-width: 1366px) { /* max-width:1000px */
+    h2 {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .rw-words2 {
+        font-size: 2rem;
+    }
+    .fa-angle-double-down {
+        font-size: 2rem;
+    }
+    .section {
+        flex-flow: row;
+        justify-content: center;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
+    }
+    .col-left {
+        padding-left: 0px;
+    }
+    .description {
+        width: 100%;
+    }
+    .col-right {
+        margin-left: 0;
+        width: 90%;
+        margin-top: 50px;
+    }
+    .calculator {
+        justify-content: center;
+        left: 0;
+    }
+    .solar-house {
+        width: 750px;
+        height: 750px;
+        top: 35.5%;
+        left: 47.5%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .fa-angle-double-down {
+        font-size: 3rem;
+    }
+    .solar-house {
+        width: 900px;
+        height: 900px;
+        top: 35.5%;
+        left: 45.5%;
+    }
+    .calculator {
+        left: -7%;
+    }
+}
+
+@media (min-width: 1920px){
+    .solar-house {
+        width: 900px;
+        height: 900px;
+        top: 35.5%;
+        left: 52.5%;
+    }
+    .calculator {
+        left: -12%;
     }
 }
