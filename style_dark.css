@@ -190,7 +190,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-image: radial-gradient(#01072C,black);
 }
 
 .description {
