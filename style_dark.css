@@ -153,6 +153,15 @@ button:hover {
 #page3 {
     background-image: linear-gradient(to bottom right, #01072C,black);
 }
+#page4 {
+    background-image: linear-gradient(to top right, #01072C,black);
+}
+#page5 {
+    background-image: linear-gradient(to bottom right, #01072C,black);
+}
+#page6 {
+    background-image: linear-gradient(to top right, #01072C,black);
+}
 /* ----- */
 
 .hero {
