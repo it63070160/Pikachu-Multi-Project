@@ -117,6 +117,15 @@ button:hover {
     background-color: #000;
 }
 
+.pushbtn {
+    border: 1px solid #f36b35;
+    width: 300px;
+    background: #f36b35;
+    color: white;
+    cursor: pointer;
+    border-radius: 0%;
+}
+
 .fa-angle-double-down { /* ปุ่มเลื่อนลง */
     position: absolute;
     left: 0;
@@ -225,6 +234,10 @@ button:hover {
     filter: alpha(opacity=0);
 }
 
+.fade-in-top {
+    animation: fade-in-top 1.2s forwards;
+}
+
 .fade-in-left {
     animation: fade-in-left 1.2s forwards;
 }
@@ -235,6 +248,10 @@ button:hover {
 
 .fade-in-bottom {
     animation: fade-in-bottom 1.2s forwards;
+}
+
+.col-center {
+    opacity: 0;
 }
 
 .col-right {
@@ -299,6 +316,19 @@ button:hover {
         opacity: 0.3;
         filter: alpha(opacity=30);
         transform: translateY(10px);
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        transform: translateY(-200px)
+    }
+    100% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        transform: translateY(0px)
     }
 }
 
@@ -390,6 +420,16 @@ button:hover {
     position: absolute;
     top: -10%;
     left: -5%;
+}
+
+.ooo4 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(69, 164, 177);
+    border-radius: 100%;
+    position: absolute;
+    top: -10%;
+    right: -5%;
 }
 
 /* เครื่องคำนวณอัจฉริยะ */
