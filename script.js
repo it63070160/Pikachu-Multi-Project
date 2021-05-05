@@ -62,6 +62,24 @@ window.onscroll = function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
+    else if (window.pageYOffset > 2500 && window.pageYOffset < 2700) {
+        document.getElementById('col-right2').classList.add('fade-in-bottom')
+        window.setTimeout(function() {
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+        }, 500)
+    }
+    else if (window.pageYOffset > 3500 && window.pageYOffset < 3700) {
+        document.getElementById('col-right3').classList.add('fade-in-top')
+        window.setTimeout(function() {
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+        }, 500)
+    }
+    else if (window.pageYOffset > 4200 && window.pageYOffset < 4400) {
+        document.getElementById('col-right4').classList.add('fade-in-top')
+        window.setTimeout(function() {
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+        }, 500)
+    }
 }
 
 // Calculator
