@@ -50,36 +50,96 @@ function scrollDown() {
 };
 
 window.onscroll = function() {
-    if (window.pageYOffset > 500 && window.pageYOffset < 700) {
+    if (window.pageYOffset >= 0 && window.pageYOffset < 500) {
+        document.getElementById('p1').classList.add('selected-page')
+        document.getElementById('p2').classList.remove('selected-page')
+        document.getElementById('p3').classList.remove('selected-page')
+        document.getElementById('p4').classList.remove('selected-page')
+        document.getElementById('p5').classList.remove('selected-page')
+        document.getElementById('p6').classList.remove('selected-page')
+    }
+    else if (window.pageYOffset > 500 && window.pageYOffset < 700) {
+        document.getElementById('p2').classList.add('selected-page')
+        document.getElementById('p1').classList.remove('selected-page')
+        document.getElementById('p3').classList.remove('selected-page')
+        document.getElementById('p4').classList.remove('selected-page')
+        document.getElementById('p5').classList.remove('selected-page')
+        document.getElementById('p6').classList.remove('selected-page')
         document.getElementById('col-left').classList.add('fade-in-left')
         window.setTimeout(function() {
             document.getElementById('calculator').classList.add('fade-in-bottom')
         }, 500)
     }
     else if (window.pageYOffset > 1500 && window.pageYOffset < 1700) {
+        document.getElementById('p3').classList.add('selected-page')
+        document.getElementById('p1').classList.remove('selected-page')
+        document.getElementById('p2').classList.remove('selected-page')
+        document.getElementById('p4').classList.remove('selected-page')
+        document.getElementById('p5').classList.remove('selected-page')
+        document.getElementById('p6').classList.remove('selected-page')
         document.getElementById('col-right').classList.add('fade-in-right')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
     else if (window.pageYOffset > 2500 && window.pageYOffset < 2700) {
+        document.getElementById('p4').classList.add('selected-page')
+        document.getElementById('p1').classList.remove('selected-page')
+        document.getElementById('p2').classList.remove('selected-page')
+        document.getElementById('p3').classList.remove('selected-page')
+        document.getElementById('p5').classList.remove('selected-page')
+        document.getElementById('p6').classList.remove('selected-page')
         document.getElementById('col-right2').classList.add('fade-in-bottom')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
     else if (window.pageYOffset > 3500 && window.pageYOffset < 3700) {
+        document.getElementById('p5').classList.add('selected-page')
+        document.getElementById('p1').classList.remove('selected-page')
+        document.getElementById('p2').classList.remove('selected-page')
+        document.getElementById('p3').classList.remove('selected-page')
+        document.getElementById('p4').classList.remove('selected-page')
+        document.getElementById('p6').classList.remove('selected-page')
         document.getElementById('col-right3').classList.add('fade-in-top')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
     else if (window.pageYOffset > 4200 && window.pageYOffset < 4400) {
+        document.getElementById('p6').classList.add('selected-page')
+        document.getElementById('p1').classList.remove('selected-page')
+        document.getElementById('p2').classList.remove('selected-page')
+        document.getElementById('p3').classList.remove('selected-page')
+        document.getElementById('p4').classList.remove('selected-page')
+        document.getElementById('p5').classList.remove('selected-page')
         document.getElementById('col-right4').classList.add('fade-in-top')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
+}
+
+function page1(){
+    window.pageYOffset = 1;
+}
+function page2(){
+    window.pageYOffset = 501;
+}
+function page3(){
+    window.pageYOffset = 1501;
+}
+function page4(){
+    window.pageYOffset = 2501;
+}
+function page4(){
+    window.pageYOffset = 2501;
+}
+function page5(){
+    window.pageYOffset = 3501;
+}
+function page6(){
+    window.pageYOffset = 4201;
 }
 
 // Calculator
