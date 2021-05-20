@@ -64,8 +64,8 @@ button:hover {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 100%;
-  }
-  
+}
+
 .dropdown {
     display: inline-block;
     position: fixed;
@@ -115,6 +115,29 @@ button:hover {
     cursor: pointer;
     border-radius: 100%;
     background-color: #000;
+}
+
+.selectpage{
+    position:fixed;
+    right:2%;
+    top:35%;
+    z-index: 1;
+}
+
+.selected-page{
+    background-color:#fff;
+}
+
+.selectbtn {
+    border: 2px solid white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 100%;
 }
 
 .pushbtn {
