@@ -99,7 +99,6 @@ function page6_scroll(){
 }
 
 window.onscroll = function() {
-    console.log(document.body.scrollHeight);
     if(document.body.scrollHeight > 5500){
         if (window.pageYOffset >= 0 && window.pageYOffset < 500) {
             page1_scroll();
@@ -186,19 +185,44 @@ function page1(){
     window.pageYOffset = 1;
 }
 function page2(){
-    window.pageYOffset = 501;
+    if(document.body.scrollHeight > 5500){
+        window.pageYOffset = 681;
+    }
+    else if(document.body.scrollHeight < 5500){
+        window.pageYOffset = 501;
+    }
 }
 function page3(){
-    window.pageYOffset = 1501;
+    if(document.body.scrollHeight > 5500){
+        window.pageYOffset = 1823;
+    }
+    else if(document.body.scrollHeight < 5500){
+        window.pageYOffset = 1321;
+    }
 }
 function page4(){
-    window.pageYOffset = 2501;
+    if(document.body.scrollHeight > 5500){
+        window.pageYOffset = 2877;
+    }
+    else if(document.body.scrollHeight < 5500){
+        window.pageYOffset = 2377;
+    }
 }
 function page5(){
-    window.pageYOffset = 3501;
+    if(document.body.scrollHeight > 5500){
+        window.pageYOffset = 3570;
+    }
+    else if(document.body.scrollHeight < 5500){
+        window.pageYOffset = 2799;
+    }
 }
 function page6(){
-    window.pageYOffset = 4201;
+    if(document.body.scrollHeight > 5500){
+        window.pageYOffset = 4270;
+    }
+    else if(document.body.scrollHeight < 5500){
+        window.pageYOffset = 3501;
+    }
 }
 
 // Calculator
