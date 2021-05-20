@@ -99,8 +99,8 @@ function page6_scroll(){
 }
 
 window.onscroll = function() {
-    console.log(window.pageYOffset);
-    if(document.body.scrollHeight > 4500){
+    console.log(document.body.scrollHeight);
+    if(document.body.scrollHeight > 5500){
         if (window.pageYOffset >= 0 && window.pageYOffset < 500) {
             page1_scroll();
         }
@@ -140,7 +140,7 @@ window.onscroll = function() {
             }, 500)
         }
     }
-    else if(document.body.scrollHeight < 4500){
+    else if(document.body.scrollHeight < 5500){
         if (window.pageYOffset >= 0 && window.pageYOffset < 500) {
             page1_scroll();
         }
@@ -172,7 +172,7 @@ window.onscroll = function() {
                 document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
             }, 500)
         }
-        else if (window.pageYOffset > 3326 && window.pageYOffset < 3831) {
+        else if (window.pageYOffset > 3500 && window.pageYOffset < 3831) {
             page6_scroll();
             document.getElementById('col-right4').classList.add('fade-in-top')
             window.setTimeout(function() {
