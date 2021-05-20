@@ -49,74 +49,136 @@ function scrollDown() {
     } else {}
 };
 
+function page1_scroll(){
+    document.getElementById('p1').classList.add('selected-page')
+    document.getElementById('p2').classList.remove('selected-page')
+    document.getElementById('p3').classList.remove('selected-page')
+    document.getElementById('p4').classList.remove('selected-page')
+    document.getElementById('p5').classList.remove('selected-page')
+    document.getElementById('p6').classList.remove('selected-page')
+}
+function page2_scroll(){
+    document.getElementById('p2').classList.add('selected-page')
+    document.getElementById('p1').classList.remove('selected-page')
+    document.getElementById('p3').classList.remove('selected-page')
+    document.getElementById('p4').classList.remove('selected-page')
+    document.getElementById('p5').classList.remove('selected-page')
+    document.getElementById('p6').classList.remove('selected-page')
+}
+function page3_scroll(){
+    document.getElementById('p3').classList.add('selected-page')
+    document.getElementById('p1').classList.remove('selected-page')
+    document.getElementById('p2').classList.remove('selected-page')
+    document.getElementById('p4').classList.remove('selected-page')
+    document.getElementById('p5').classList.remove('selected-page')
+    document.getElementById('p6').classList.remove('selected-page')
+}
+function page4_scroll(){
+    document.getElementById('p4').classList.add('selected-page')
+    document.getElementById('p1').classList.remove('selected-page')
+    document.getElementById('p2').classList.remove('selected-page')
+    document.getElementById('p3').classList.remove('selected-page')
+    document.getElementById('p5').classList.remove('selected-page')
+    document.getElementById('p6').classList.remove('selected-page')
+}
+function page5_scroll(){
+    document.getElementById('p5').classList.add('selected-page')
+    document.getElementById('p1').classList.remove('selected-page')
+    document.getElementById('p2').classList.remove('selected-page')
+    document.getElementById('p3').classList.remove('selected-page')
+    document.getElementById('p4').classList.remove('selected-page')
+    document.getElementById('p6').classList.remove('selected-page')
+}
+function page6_scroll(){
+    document.getElementById('p6').classList.add('selected-page')
+    document.getElementById('p1').classList.remove('selected-page')
+    document.getElementById('p2').classList.remove('selected-page')
+    document.getElementById('p3').classList.remove('selected-page')
+    document.getElementById('p4').classList.remove('selected-page')
+    document.getElementById('p5').classList.remove('selected-page')
+}
+
 window.onscroll = function() {
-    if (window.pageYOffset >= 0 && window.pageYOffset < 500) {
-        document.getElementById('p1').classList.add('selected-page')
-        document.getElementById('p2').classList.remove('selected-page')
-        document.getElementById('p3').classList.remove('selected-page')
-        document.getElementById('p4').classList.remove('selected-page')
-        document.getElementById('p5').classList.remove('selected-page')
-        document.getElementById('p6').classList.remove('selected-page')
+    console.log(window.pageYOffset);
+    if(document.body.scrollHeight > 4500){
+        if (window.pageYOffset >= 0 && window.pageYOffset < 500) {
+            page1_scroll();
+        }
+        else if (window.pageYOffset > 680 && window.pageYOffset < 1130) {
+            page2_scroll();
+            document.getElementById('col-left').classList.add('fade-in-left')
+            window.setTimeout(function() {
+                document.getElementById('calculator').classList.add('fade-in-bottom')
+            }, 500)
+        }
+        else if (window.pageYOffset > 1822 && window.pageYOffset < 2176) {
+            page3_scroll();
+            document.getElementById('col-right').classList.add('fade-in-right')
+            window.setTimeout(function() {
+                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            }, 500)
+        }
+        else if (window.pageYOffset > 2876 && window.pageYOffset < 3560) {
+            page4_scroll();
+            document.getElementById('col-right2').classList.add('fade-in-bottom')
+            window.setTimeout(function() {
+                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            }, 500)
+        }
+        else if (window.pageYOffset > 3569 && window.pageYOffset < 4260) {
+            page5_scroll();
+            document.getElementById('col-right3').classList.add('fade-in-top')
+            window.setTimeout(function() {
+                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            }, 500)
+        }
+        else if (window.pageYOffset > 4269 && window.pageYOffset < 4400) {
+            page6_scroll();
+            document.getElementById('col-right4').classList.add('fade-in-top')
+            window.setTimeout(function() {
+                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            }, 500)
+        }
     }
-    else if (window.pageYOffset > 500 && window.pageYOffset < 700) {
-        document.getElementById('p2').classList.add('selected-page')
-        document.getElementById('p1').classList.remove('selected-page')
-        document.getElementById('p3').classList.remove('selected-page')
-        document.getElementById('p4').classList.remove('selected-page')
-        document.getElementById('p5').classList.remove('selected-page')
-        document.getElementById('p6').classList.remove('selected-page')
-        document.getElementById('col-left').classList.add('fade-in-left')
-        window.setTimeout(function() {
-            document.getElementById('calculator').classList.add('fade-in-bottom')
-        }, 500)
-    }
-    else if (window.pageYOffset > 1500 && window.pageYOffset < 1700) {
-        document.getElementById('p3').classList.add('selected-page')
-        document.getElementById('p1').classList.remove('selected-page')
-        document.getElementById('p2').classList.remove('selected-page')
-        document.getElementById('p4').classList.remove('selected-page')
-        document.getElementById('p5').classList.remove('selected-page')
-        document.getElementById('p6').classList.remove('selected-page')
-        document.getElementById('col-right').classList.add('fade-in-right')
-        window.setTimeout(function() {
-            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-        }, 500)
-    }
-    else if (window.pageYOffset > 2500 && window.pageYOffset < 2700) {
-        document.getElementById('p4').classList.add('selected-page')
-        document.getElementById('p1').classList.remove('selected-page')
-        document.getElementById('p2').classList.remove('selected-page')
-        document.getElementById('p3').classList.remove('selected-page')
-        document.getElementById('p5').classList.remove('selected-page')
-        document.getElementById('p6').classList.remove('selected-page')
-        document.getElementById('col-right2').classList.add('fade-in-bottom')
-        window.setTimeout(function() {
-            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-        }, 500)
-    }
-    else if (window.pageYOffset > 3500 && window.pageYOffset < 3700) {
-        document.getElementById('p5').classList.add('selected-page')
-        document.getElementById('p1').classList.remove('selected-page')
-        document.getElementById('p2').classList.remove('selected-page')
-        document.getElementById('p3').classList.remove('selected-page')
-        document.getElementById('p4').classList.remove('selected-page')
-        document.getElementById('p6').classList.remove('selected-page')
-        document.getElementById('col-right3').classList.add('fade-in-top')
-        window.setTimeout(function() {
-            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-        }, 500)
-    }
-    else if (window.pageYOffset > 4200 && window.pageYOffset < 4400) {
-        document.getElementById('p6').classList.add('selected-page')
-        document.getElementById('p1').classList.remove('selected-page')
-        document.getElementById('p2').classList.remove('selected-page')
-        document.getElementById('p3').classList.remove('selected-page')
-        document.getElementById('p4').classList.remove('selected-page')
-        document.getElementById('p5').classList.remove('selected-page')
-        document.getElementById('col-right4').classList.add('fade-in-top')
-        window.setTimeout(function() {
-            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-        }, 500)
+    else if(document.body.scrollHeight < 4500){
+        if (window.pageYOffset >= 0 && window.pageYOffset < 500) {
+            page1_scroll();
+        }
+        else if (window.pageYOffset > 500 && window.pageYOffset < 1110) {
+            page2_scroll();
+            document.getElementById('col-left').classList.add('fade-in-left')
+            window.setTimeout(function() {
+                document.getElementById('calculator').classList.add('fade-in-bottom')
+            }, 500)
+        }
+        else if (window.pageYOffset > 1320 && window.pageYOffset < 2165) {
+            page3_scroll();
+            document.getElementById('col-right').classList.add('fade-in-right')
+            window.setTimeout(function() {
+                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            }, 500)
+        }
+        else if (window.pageYOffset > 2376 && window.pageYOffset < 2587) {
+            page4_scroll();
+            document.getElementById('col-right2').classList.add('fade-in-bottom')
+            window.setTimeout(function() {
+                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            }, 500)
+        }
+        else if (window.pageYOffset > 2798 && window.pageYOffset < 3115) {
+            page5_scroll();
+            document.getElementById('col-right3').classList.add('fade-in-top')
+            window.setTimeout(function() {
+                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            }, 500)
+        }
+        else if (window.pageYOffset > 3326 && window.pageYOffset < 3831) {
+            page6_scroll();
+            document.getElementById('col-right4').classList.add('fade-in-top')
+            window.setTimeout(function() {
+                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            }, 500)
+        }
     }
 }
 
@@ -128,9 +190,6 @@ function page2(){
 }
 function page3(){
     window.pageYOffset = 1501;
-}
-function page4(){
-    window.pageYOffset = 2501;
 }
 function page4(){
     window.pageYOffset = 2501;
