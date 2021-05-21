@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-
 body,
 html {
     margin: 0;
@@ -29,6 +28,7 @@ h2 {
     margin-bottom: 16px;
     margin-bottom: 1rem;
 }
+
 
 /* ปุ่มทั้งหลาย */
 
@@ -117,15 +117,15 @@ button:hover {
     background-color: #000;
 }
 
-.selectpage{
-    position:fixed;
-    right:2%;
-    top:35%;
+.selectpage {
+    position: fixed;
+    right: 2%;
+    top: 35%;
     z-index: 1;
 }
 
-.selected-page{
-    background-color:#fff;
+.selected-page {
+    background-color: #fff;
 }
 
 .selectbtn {
@@ -149,7 +149,8 @@ button:hover {
     border-radius: 0%;
 }
 
-.fa-angle-double-down { /* ปุ่มเลื่อนลง */
+.fa-angle-double-down {
+    /* ปุ่มเลื่อนลง */
     position: absolute;
     left: 0;
     right: 0;
@@ -164,9 +165,13 @@ button:hover {
     cursor: pointer;
     animation: glow 4s infinite;
 }
+
+
 /* ----- */
 
+
 /* หน้าสอง */
+
 .section {
     padding: 0px 200px 100px 0px;
     box-sizing: border-box;
@@ -179,26 +184,31 @@ button:hover {
 }
 
 #page2 {
-    background-image: linear-gradient(to top right, #01072C,black);
+    background-image: linear-gradient(to top right, #01072C, black);
 }
 
 #page3 {
-    background-image: linear-gradient(to bottom right, #01072C,black);
+    background-image: linear-gradient(to bottom right, #01072C, black);
 }
+
 #page4 {
-    background-image: linear-gradient(to top right, #01072C,black);
+    background-image: linear-gradient(to top right, #01072C, black);
 }
+
 #page5 {
-    background-image: linear-gradient(to bottom right, #01072C,black);
+    background-image: linear-gradient(to bottom right, #01072C, black);
 }
+
 #page6 {
-    background-image: linear-gradient(to top right, #01072C,black);
+    background-image: linear-gradient(to top right, #01072C, black);
 }
+
+
 /* ----- */
 
 .hero {
     height: 100vh;
-    background-image: linear-gradient(to bottom right, #01072C,black);
+    background-image: linear-gradient(to bottom right, #01072C, black);
     position: relative;
     background-size: cover;
     z-index: 1;
@@ -208,7 +218,7 @@ button:hover {
     color: #f58634;
 }
 
-.topic{
+.topic {
     color: #f58634;
     font-size: 1.5em;
 }
@@ -394,6 +404,7 @@ button:hover {
     }
 }
 
+
 /* css animation text */
 
 .rw-sentence>.rw-words.rw-words-1>span {
@@ -431,7 +442,7 @@ button:hover {
     background-color: #f58634;
     border-radius: 100%;
     position: absolute;
-    bottom: -10%;
+    bottom: -9%;
     left: -5%;
 }
 
@@ -455,9 +466,41 @@ button:hover {
     right: -5%;
 }
 
+.ooo5 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(69, 164, 177);
+    border-radius: 100%;
+    position: absolute;
+    top: -16%;
+    right: -5%;
+}
+
+.ooo6 {
+    width: 200px;
+    height: 200px;
+    background-color: #f58634;
+    border-radius: 100%;
+    position: absolute;
+    top: -23.8%;
+    left: -5%;
+}
+
+.ooo7 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(69, 164, 177);
+    border-radius: 100%;
+    position: absolute;
+    bottom: -20%;
+    right: -5%;
+}
+
+
 /* เครื่องคำนวณอัจฉริยะ */
+
 .calculator {
-    position:relative;
+    position: relative;
     width: 500px;
     height: 500px;
     display: block;
@@ -510,7 +553,9 @@ option {
     text-align: center;
 }
 
+
 /* Firstpage */
+
 .rw-words {
     margin-left: 50px;
     display: inline;
@@ -677,7 +722,6 @@ option {
     text-align: center;
 }
 
-
 .solar-house {
     position: absolute;
     width: 900px;
@@ -690,19 +734,19 @@ option {
 }
 
 @keyframes fade-house {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(1000px);
     }
-    50%{
+    50% {
         opacity: 0.5;
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
-    
 }
+
 @media (min-width: 800px) {
     h1 {
         font-size: 3rem;
@@ -729,7 +773,8 @@ option {
     }
 }
 
-@media (min-width: 1366px) { /* max-width:1000px */
+@media (min-width: 1366px) {
+    /* max-width:1000px */
     h2 {
         font-size: 2rem;
     }
@@ -787,7 +832,7 @@ option {
     }
 }
 
-@media (min-width: 1920px){
+@media (min-width: 1920px) {
     .solar-house {
         width: 900px;
         height: 900px;
