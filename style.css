@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-
 body,
 html {
     margin: 0;
@@ -62,8 +61,8 @@ button:hover {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 100%;
-  }
-  
+}
+
 .dropdown {
     display: inline-block;
     position: fixed;
@@ -122,15 +121,15 @@ button:hover {
     background-color: #000;
 }
 
-.selectpage{
-    position:fixed;
-    right:2%;
-    top:35%;
+.selectpage {
+    position: fixed;
+    right: 2%;
+    top: 35%;
     z-index: 1;
 }
 
-.selected-page{
-    background-color:#fff;
+.selected-page {
+    background-color: #fff;
 }
 
 .selectbtn {
@@ -173,12 +172,15 @@ button:hover {
 #page3 {
     background-image: none;
 }
+
 #page4 {
     background-image: none;
 }
+
 #page5 {
     background-image: none;
 }
+
 #page6 {
     background-image: none;
 }
@@ -212,7 +214,7 @@ button:hover {
     color: #f58634;
 }
 
-.topic{
+.topic {
     color: #f58634;
     font-size: 1.5em;
 }
@@ -277,7 +279,6 @@ button:hover {
 .fade-in-bottom {
     animation: fade-in-bottom 1.2s forwards;
 }
-
 
 .col-right {
     width: 100%;
@@ -396,6 +397,7 @@ button:hover {
     }
 }
 
+
 /* css animation text */
 
 .rw-sentence>.rw-words.rw-words-1>span {
@@ -418,18 +420,17 @@ button:hover {
 }
 
 @keyframes fade-width {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-1000px);
     }
-    50%{
+    50% {
         opacity: 0.5;
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }
-    
 }
 
 .ooo {
@@ -448,13 +449,65 @@ button:hover {
     background-color: #f58634;
     border-radius: 100%;
     position: absolute;
-    bottom: -10%;
+    bottom: -9%;
     left: -5%;
 }
 
+.ooo3 {
+    width: 200px;
+    height: 200px;
+    background-color: #f58634;
+    border-radius: 100%;
+    position: absolute;
+    top: -10%;
+    left: -5%;
+}
+
+.ooo4 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(69, 164, 177);
+    border-radius: 100%;
+    position: absolute;
+    top: -10%;
+    right: -5%;
+}
+
+.ooo5 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(69, 164, 177);
+    border-radius: 100%;
+    position: absolute;
+    top: -16%;
+    right: -5%;
+}
+
+.ooo6 {
+    width: 200px;
+    height: 200px;
+    background-color: #f58634;
+    border-radius: 100%;
+    position: absolute;
+    top: -23.8%;
+    left: -5%;
+}
+
+.ooo7 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(69, 164, 177);
+    border-radius: 100%;
+    position: absolute;
+    bottom: -20%;
+    right: -5%;
+}
+
+
 /* เครื่องคำนวณอัจฉริยะ */
+
 .calculator {
-    position:relative;
+    position: relative;
     width: 500px;
     height: 500px;
     display: block;
@@ -506,7 +559,9 @@ option {
     text-align: center;
 }
 
+
 /* First Page */
+
 .rw-words {
     margin-left: 50px;
     display: inline;
@@ -685,19 +740,19 @@ option {
 }
 
 @keyframes fade-house {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(1000px);
     }
-    50%{
+    50% {
         opacity: 0.5;
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
-    
 }
+
 @media (min-width: 800px) {
     h1 {
         font-size: 3rem;
@@ -727,7 +782,8 @@ option {
     }
 }
 
-@media (min-width: 1366px) { /* max-width:1000px */
+@media (min-width: 1366px) {
+    /* max-width:1000px */
     h2 {
         font-size: 2rem;
     }
@@ -785,7 +841,7 @@ option {
     }
 }
 
-@media (min-width: 1920px){
+@media (min-width: 1920px) {
     .solar-house {
         width: 900px;
         height: 900px;
