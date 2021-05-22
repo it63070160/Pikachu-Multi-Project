@@ -5,6 +5,7 @@ document.getElementById('scroll-icon').addEventListener('click', function() {
         scrollDown()
     });
 });
+
 // document.getElementById('scroll-button').addEventListener('click', function() {
 //     window.requestAnimationFrame(function() {
 //         scrollCount = window.pageYOffset;
@@ -46,7 +47,8 @@ function scrollDown() {
         window.requestAnimationFrame(function() {
             scrollDown();
         });
-    } else {}
+    }
+    else {}
 };
 
 function page1_scroll(){
@@ -103,35 +105,35 @@ window.onscroll = function() {
         if (window.pageYOffset >= 0 && window.pageYOffset < 500) {
             page1_scroll();
         }
-        else if (window.pageYOffset > 680 && window.pageYOffset < 1130) {
+        if (window.pageYOffset > 680 && window.pageYOffset < 1130) {
             page2_scroll();
             document.getElementById('col-left').classList.add('fade-in-left')
             window.setTimeout(function() {
                 document.getElementById('calculator').classList.add('fade-in-bottom')
             }, 500)
         }
-        else if (window.pageYOffset > 1822 && window.pageYOffset < 2176) {
+        if (window.pageYOffset > 1822 && window.pageYOffset < 2176) {
             page3_scroll();
             document.getElementById('col-right').classList.add('fade-in-right')
             window.setTimeout(function() {
                 document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
             }, 500)
         }
-        else if (window.pageYOffset > 2876 && window.pageYOffset < 3560) {
+        if (window.pageYOffset > 2876 && window.pageYOffset < 3560) {
             page4_scroll();
             document.getElementById('col-right2').classList.add('fade-in-bottom')
             window.setTimeout(function() {
                 document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
             }, 500)
         }
-        else if (window.pageYOffset > 3569 && window.pageYOffset < 4260) {
+        if (window.pageYOffset > 3569 && window.pageYOffset < 4260) {
             page5_scroll();
             document.getElementById('col-right3').classList.add('fade-in-top')
             window.setTimeout(function() {
                 document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
             }, 500)
         }
-        else if (window.pageYOffset > 4269 && window.pageYOffset < 4400) {
+        if (window.pageYOffset > 4269 && window.pageYOffset < 4400) {
             page6_scroll();
             document.getElementById('col-right4').classList.add('fade-in-top')
             window.setTimeout(function() {
@@ -218,7 +220,7 @@ function page5(){
 }
 function page6(){
     if(document.body.scrollHeight > 5500){
-        window.pageYOffset = 4270;
+        window.scrollTo(0,4270);
     }
     else if(document.body.scrollHeight < 5500){
         window.pageYOffset = 3501;
@@ -333,3 +335,33 @@ function calculate(){
     document.getElementById("calculated-save").innerHTML = 'ประหยัด: ' + save + unit_save;
 }
 // -- //
+
+// img slideshow
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("imghere");
+  var dots = document.getElementsByClassName("selectimg");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
