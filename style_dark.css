@@ -29,6 +29,11 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.border-img{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
 
 /* ปุ่มทั้งหลาย */
 
@@ -50,6 +55,36 @@ button:focus {
 
 button:hover {
     opacity: 0.7;
+}
+
+.imghere{
+    display: none;
+}
+
+.selectimg{
+    border: 2px solid white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 100%;
+}
+
+.active, .selectimg:hover{
+    background-color:#fff;
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 .dropbtn {
@@ -442,7 +477,7 @@ button:hover {
     background-color: #f58634;
     border-radius: 100%;
     position: absolute;
-    bottom: -9%;
+    bottom: -10%;
     left: -5%;
 }
 
@@ -472,27 +507,7 @@ button:hover {
     background-color: rgb(69, 164, 177);
     border-radius: 100%;
     position: absolute;
-    top: -16%;
-    right: -5%;
-}
-
-.ooo6 {
-    width: 200px;
-    height: 200px;
-    background-color: #f58634;
-    border-radius: 100%;
-    position: absolute;
-    top: -23.8%;
-    left: -5%;
-}
-
-.ooo7 {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(69, 164, 177);
-    border-radius: 100%;
-    position: absolute;
-    bottom: -20%;
+    top: -8%;
     right: -5%;
 }
 
@@ -771,6 +786,12 @@ option {
         justify-content: center;
         left: 5%;
     }
+    .ooo4{
+        top: -12%;
+    }
+    .ooo5{
+        top: -9.1%;
+    }
 }
 
 @media (min-width: 1366px) {
@@ -815,6 +836,12 @@ option {
         top: 35.5%;
         left: 47.5%;
     }
+    .ooo4{
+        top: -10%;
+    }
+    .ooo5{
+        top: -8%;
+    }
 }
 
 @media (min-width: 1600px) {
@@ -830,6 +857,12 @@ option {
     .calculator {
         left: -7%;
     }
+    .ooo4{
+        top: -10%;
+    }
+    .ooo5{
+        top: -8%;
+    }
 }
 
 @media (min-width: 1920px) {
@@ -841,5 +874,11 @@ option {
     }
     .calculator {
         left: -12%;
+    }
+    .ooo4{
+        top: -10%;
+    }
+    .ooo5{
+        top: -8%;
     }
 }
