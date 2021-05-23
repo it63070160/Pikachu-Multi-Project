@@ -102,12 +102,30 @@ button:hover {
     border-radius: 100%;
 }
 
+.gamebtn {
+    border: 2px solid white;
+    background-image: url(./pics/game.png);
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 100%;
+    position: fixed;
+    top:2%;
+    left:1%;
+    z-index: 2;
+}
+
 .dropdown {
     display: inline-block;
     position: fixed;
     padding-top: 10px;
-    top: 0%;
-    right: 2%;
+    top: 2%;
+    right: 1%;
     z-index: 2;
 }
 
