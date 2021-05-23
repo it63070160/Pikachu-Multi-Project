@@ -19,6 +19,7 @@ h1 {
     font-weight: 900;
     margin: 0;
     line-height: 1em;
+    z-index: 1;
 }
 
 h2 {
@@ -106,14 +107,14 @@ button:hover {
     position: fixed;
     padding-top: 10px;
     right: 2%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .dropdown-content {
     display: none;
     position: fixed;
     min-width: 160px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .dropdown-content a {
@@ -163,7 +164,7 @@ button:hover {
     position: fixed;
     right: 2%;
     top: 35%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .selected-page {
@@ -245,7 +246,7 @@ button:hover {
     background-image: none;
     position: relative;
     background-size: cover;
-    z-index: 1;
+    z-index: 0;
 }
 
 .highlight {
@@ -479,6 +480,7 @@ button:hover {
     position: absolute;
     bottom: -10%;
     right: -5%;
+    z-index: 1;
 }
 
 .ooo2 {
@@ -487,28 +489,31 @@ button:hover {
     background-color: #f58634;
     border-radius: 100%;
     position: absolute;
-    bottom: -10%;
+    bottom: -125%;
     left: -5%;
+    z-index: 1;
 }
 
 .ooo3 {
     width: 200px;
     height: 200px;
-    background-color: #f58634;
+    background-color: rgb(69, 164, 177);
     border-radius: 100%;
     position: absolute;
-    top: -10%;
-    left: -5%;
+    bottom: -230%;
+    right: -5%;
+    z-index: 1;
 }
 
 .ooo4 {
     width: 200px;
     height: 200px;
-    background-color: rgb(69, 164, 177);
+    background-color: #f58634;
     border-radius: 100%;
-    position: absolute;
-    top: -10%;
-    right: -5%;
+    position:absolute;
+    bottom: -335%;
+    left: -5%;
+    z-index: 1;
 }
 
 .ooo5 {
@@ -516,9 +521,21 @@ button:hover {
     height: 200px;
     background-color: rgb(69, 164, 177);
     border-radius: 100%;
-    position: absolute;
-    top: -8%;
+    position:absolute;
+    bottom: -435%;
     right: -5%;
+    z-index: 1;
+}
+
+.ooo6 {
+    width: 200px;
+    height: 200px;
+    background-color: #f58634;
+    border-radius: 100%;
+    position:absolute;
+    bottom: -550%;
+    left: -5%;
+    z-index: 1;
 }
 
 
@@ -534,7 +551,6 @@ button:hover {
     background-color: transparent;
     border: 2px solid black;
     border-radius: 5px;
-    z-index: 15;
     opacity: 0;
 }
 
@@ -746,6 +762,34 @@ option {
     text-align: center;
 }
 
+.bulb {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0%;
+    right: -5%;
+    background-image: url(./pics/bulb_long.svg);
+    background-repeat: no-repeat;
+}
+.bulb2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 0%;
+    right: 10%;
+    background-image: url(./pics/bulb.svg);
+    background-repeat: no-repeat;
+}
+.bulb3 {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: -3%;
+    left: -10%;
+    background-image: url(./pics/bulb.svg);
+    background-repeat: no-repeat;
+}
+
 .solar-house {
     position: absolute;
     width: 900px;
@@ -798,11 +842,17 @@ option {
     .brush {
         top: -80px;
     }
+    .ooo2{
+        bottom: -150%;
+    }
+    .ooo3{
+        bottom: -270%;
+    }
     .ooo4{
-        top: -12%;
+        bottom: -373%;
     }
     .ooo5{
-        top: -9.1%;
+        bottom: -474%;
     }
 }
 
@@ -848,11 +898,17 @@ option {
         top: 35.5%;
         left: 47.5%;
     }
+    .ooo2{
+        bottom: -108%;
+    }
+    .ooo3{
+        bottom: -217%;
+    }
     .ooo4{
-        top: -10%;
+        bottom: -319%;
     }
     .ooo5{
-        top: -8%;
+        bottom: -419%;
     }
 }
 
@@ -869,11 +925,17 @@ option {
     .calculator {
         left: -7%;
     }
+    .ooo2{
+        bottom: -111%;
+    }
+    .ooo3{
+        bottom: -211%;
+    }
     .ooo4{
-        top: -10%;
+        bottom: -315%;
     }
     .ooo5{
-        top: -8%;
+        bottom: -415%;
     }
 }
 
@@ -887,10 +949,16 @@ option {
     .calculator {
         left: -12%;
     }
+    .ooo2{
+        bottom: -108%;
+    }
+    .ooo3{
+        bottom: -209%;
+    }
     .ooo4{
-        top: -10%;
+        bottom: -309%;
     }
     .ooo5{
-        top: -8%;
+        bottom: -410%;
     }
 }
