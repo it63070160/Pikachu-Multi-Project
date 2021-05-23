@@ -12,24 +12,8 @@
 <body>
     <div class='container' id='container'>
         <div class='hero' id='hero'>
-            <div class="dropdown">
-                <button class="dropbtn"></button>
-                <div class="dropdown-content">
-                    <button class="brightbtn" onclick="bright()"></button><br>
-                    <button class="darkbtn" onclick="dark()"></button>
-                </div>
-            </div>
-            <div class="selectpage">
-                <button class="selectbtn" id="p1"></button><br>
-                <button class="selectbtn" id="p2"></button><br>
-                <button class="selectbtn" id="p3"></button><br>
-                <button class="selectbtn" id="p4"></button><br>
-                <button class="selectbtn" id="p5"></button><br>
-                <button class="selectbtn" id="p6"></button>
-            </div>
             <div class="topic_content">
                 <img src="./pics/brush.png" class="brush">
-                <div class="ooo"></div>
                 <h1>Solar Rooftop</h1>
                 <div class="between2"></div>
                 <div class='rw-words2 rw-words-2'>
@@ -41,6 +25,8 @@
                     <span>การลดการใช้, การใช้ซ้ำ, การรีไซเคิล</span>
                 </div>
                 <div class="solar-house"></div>
+                <div class="bulb"></div>
+                <div class="bulb2"></div>
             </div>
 
             <i class='fa fa-angle-double-down' id='scroll-icon'></i>
@@ -49,7 +35,6 @@
 
         <div class='flex-wrapper'>
             <div class='section' id='page2'>
-                <div class="ooo2"></div>
                 <div class='col-left' id='col-left'>
                     <h2> <i class="fas fa-quote-left"></i><br>ทำไมต้องใช้ <span class='highlight-secondary'>โซลาร์เซลล์ </span>?</h2>
                     <div class='paragraph'><span class="highlight"> แผงโซลาร์เซลล์มีราคาถูกลง</span>
@@ -63,16 +48,7 @@
                 <div class='between3'></div>
                 <div class='calculator' id='calculator'>
                     <p class="solartitle">Solar Calculator</p>
-                    <select id="selector-cal" class="cal-select" onchange="sizechange()">
-                        <option value="house">ครัวเรือน</option>
-                        <option value="hospital-large" disabled>โรงพยาบาลขนาดใหญ่ (Soon)</option>
-                        <option value="hospital-district" disabled>โรงพยาบาลอำเภอ (Soon)</option>
-                        <option value="hospital-healthy" disabled>โรงพยาบาลสร้างเสริมสุขภาพระดับตำบล (Soon)</option>
-                        <option value="school-verylarge" disabled>โรงเรียนขนาดใหญ่พิเศษ (Soon)</option>
-                        <option value="school-large" disabled>โรงเรียนขนาดใหญ่ (Soon)</option>
-                        <option value="school-medium" disabled>โรงเรียนขนาดกลาง (Soon)</option>
-                        <option value="school-small" disabled>โรงเรียนขนาดเล็ก (Soon)</option>
-                    </select>
+                    <input type='text' class='cal-select' id='selector-cal' placeholder="ครัวเรือน">
                     <p class="solartitle">ขนาด (กิโลวัตต์)</p>
                     <input type='text' class='input-cal' id='size' placeholder="0">
                     <p class="solartitle">จำนวน (แผง)</p>
@@ -86,7 +62,6 @@
 
         <div class='flex-wrapper'>
             <div class='section' id='page3'>
-                <div class="ooo3"></div>
                 <div class='col-left' id='col-right'>
                     <h2> <i class="fas fa-quote-left"></i><br>พัฒนาการของการผลิตไฟฟ้า พลังงานแสงอาทิตย์ที่ติดตั้ง บนหลังคา (Solar PV Rooftop) <span class='highlight-secondary'>ในประเทศไทย</span></h2>
                     <div class='paragraph'>
@@ -98,9 +73,7 @@
                         <p>เป็นการส่งเสริมการติดตั้งโซลาร์รูฟท็อปอย่างเสรีสำหรับบ้านและอาคารเป็นหลัก โดยมีหลักการคือไม่รับซื้อไฟฟ้าส่วนเกิน ที่ไหลย้อนเข้าระบบสายจำหน่าย <br>และมีการยกเว้นค่าธรรมเนียมในการตรวจสอบเพื่อเป็นแรงจูงใจให้ผู้สนใจเข้าร่วมโครงการมากขึ้น</p>
                     </div>
                 </div>
-                <!-- <div class='between3'></div> -->
                 <div class='#' id='col-left-overlay'></div>
-                <div class="ooo"></div>
             </div>
         </div>
         <div class='flex-wrapper'>
@@ -113,17 +86,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="ooo2"></div>
-                <div class="ooo4"></div>
-                <!-- <div class='between3'></div> -->
                 <div class='#' id='col-left-overlay'></div>
             </div>
         </div>
 
         <div class='flex-wrapper'>
             <div class='section' id='page5'>
-                <div class="ooo3"></div>
-                <div class="ooo"></div>
                 <div class='col-center' id='col-right3'>
                     <h2> <i class="fas fa-quote-left"></i><br>ผลประโยชน์ทางสังคมและสิ่งแวดล้อมที่<span class='highlight-secondary'>คาดว่าจะได้รับ</span></h2>
                     <div class='paragraph'><span class="highlight-secondary">ผลประโยชน์ทางสังคม</span>
@@ -133,7 +101,6 @@
                         <p>ช่วยลดการผลิตไฟฟ้าจากโรงงานก๊าซธรรมชาติ(เช่นอุตสาหกรรมถ่านหิน) และยังช่วยลดการปล่อยก๊าซเรือรกระจกได้ถึง 1.48 ล้านตันต่อปี</p>
                     </div>
                 </div>
-                <!-- <div class='between3'></div> -->
                 <div class='#' id='col-left-overlay'></div>
             </div>
         </div>
@@ -152,10 +119,10 @@
 
                     <div class="border-img">
                         <div class="imghere fade">
-                            <img src="./pics/3re.png" style="width: 100%">
+                            <img src="./pics/3re.jpg" style="width: 100%">
                         </div>
                         <div class="imghere fade">
-                            <img src="./pics/solarhouse.png" style="width: 100%">
+                            <img src="./pics/solarhouse.jpg" style="width: 100%">
                         </div>
                         <div class="imghere fade">
                             <img src="./pics/graph.png" style="width: 100%">
@@ -169,14 +136,34 @@
 
                     <div class="paragraph">
                         <p>ร่วมเป็นส่วนหนึ่งในการผลักดันรัฐบาลนำงบประมาณฟื้นฟูเศรษฐกิจหลังโควิด-19 กับทาง Greenpeace</p>
-                    </div> <a href='https://act.greenpeace.org/page/42849/petition/1?_ga=2.23101244.741047470.1620189993-1614142532.1610381465'><button class='pushbtn'>ร่วมผลักดัน</button></a>
+                    </div> <a href='https://act.greenpeace.org/page/42849/petition/1?_ga=2.23101244.741047470.1620189993-1614142532.1610381465' target="_blank"><button class='pushbtn'>ร่วมผลักดัน</button></a>
                 </div>
-                <div class="ooo2"></div>
-                <div class="ooo5"></div>
-                <!-- <div class='between3'></div> -->
                 <div class='#' id='col-left-overlay'></div>
             </div>
         </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"></button>
+            <div class="dropdown-content">
+                <button class="brightbtn" onclick="bright()"></button><br>
+                <button class="darkbtn" onclick="dark()"></button>
+            </div>
+        </div>
+
+        <div class="selectpage">
+            <button class="selectbtn" id="p1"></button><br>
+            <button class="selectbtn" id="p2"></button><br>
+            <button class="selectbtn" id="p3"></button><br>
+            <button class="selectbtn" id="p4"></button><br>
+            <button class="selectbtn" id="p5"></button><br>
+            <button class="selectbtn" id="p6"></button>
+        </div>
+
+        <div class="ooo"></div>
+        <div class="ooo2"></div>
+        <div class="ooo3"></div>
+        <div class="ooo4"></div>
+        <div class="ooo5"></div>
 
     </div>
     <script src="./script.js"></script>
