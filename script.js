@@ -149,7 +149,7 @@ function scrollUp1() {
 
 function scrollUp2() {
     scrollCount -= 25;
-    if (window.pageYOffset > 950) {
+    if (window.pageYOffset > document.getElementById('page2').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp2();
@@ -160,7 +160,7 @@ function scrollUp2() {
 
 function scrollUp3() {
     scrollCount -= 25;
-    if (window.pageYOffset > 2100) {
+    if (window.pageYOffset > document.getElementById('page3').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp3();
@@ -171,7 +171,7 @@ function scrollUp3() {
 
 function scrollUp4() {
     scrollCount -= 25;
-    if (window.pageYOffset > 3150) {
+    if (window.pageYOffset > document.getElementById('page4').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp4();
@@ -182,7 +182,7 @@ function scrollUp4() {
 
 function scrollUp5() {
     scrollCount -= 25;
-    if (window.pageYOffset > 4100) {
+    if (window.pageYOffset > document.getElementById('page5').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp5();
@@ -193,7 +193,7 @@ function scrollUp5() {
 
 function scrollUp6() {
     scrollCount -= 25;
-    if (window.pageYOffset > 5050) {
+    if (window.pageYOffset > document.getElementById('page6').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp6();
@@ -304,87 +304,44 @@ function scrollDown6() {
     else {}
 };
 window.onscroll = function() {
-    console.log(document.documentElement.scrollHeight);
-    var height = document.documentElement.scrollHeight;
-    if(height >= 6022){
-        if (window.scrollY >= 0 && window.scrollY < 1130) {
-            select1();
-        }
-        if (window.scrollY > 680 && window.scrollY < 1130){
-            select2();
-            document.getElementById('col-left').classList.add('fade-in-left')
-            window.setTimeout(function() {
-                document.getElementById('calculator').classList.add('fade-in-bottom')
-            }, 500)
-        }
-        else if (window.scrollY > 1822 && window.scrollY < 2176) {
-            select3();
-            document.getElementById('col-right').classList.add('fade-in-right')
-            window.setTimeout(function() {
-                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-            }, 500)
-        }
-        else if (window.scrollY > 2876 && window.scrollY < 3560) {
-            select4();
-            document.getElementById('col-right2').classList.add('fade-in-bottom')
-            window.setTimeout(function() {
-                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-            }, 500)
-        }
-        else if (window.scrollY > 3569 && window.scrollY < 4260) {
-            select5();
-            document.getElementById('col-right3').classList.add('fade-in-top')
-            window.setTimeout(function() {
-                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-            }, 500)
-        }
-        else if (window.scrollY > 4269 && window.scrollY < 4400) {
-            select6();
-            document.getElementById('col-right4').classList.add('fade-in-top')
-            window.setTimeout(function() {
-                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-            }, 500)
-        }
+    // console.log(window.pageYOffset+" "+document.getElementById('page6').offsetTop);
+    if (window.pageYOffset >= document.getElementById('container').offsetTop) {
+        select1();
     }
-    else if(height < 6470){
-        if (window.scrollY >= 0 && window.scrollY < 1130) {
-            select1();
-        }
-        if (window.scrollY > 680 && window.scrollY < 1130){
-            select2();
-            document.getElementById('col-left').classList.add('fade-in-left')
-            window.setTimeout(function() {
-                document.getElementById('calculator').classList.add('fade-in-bottom')
-            }, 500)
-        }
-        else if (window.scrollY > 1822 && window.scrollY < 2176) {
-            select3();
-            document.getElementById('col-right').classList.add('fade-in-right')
-            window.setTimeout(function() {
-                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-            }, 500)
-        }
-        else if (window.scrollY > 2876 && window.scrollY < 3560) {
-            select4();
-            document.getElementById('col-right2').classList.add('fade-in-bottom')
-            window.setTimeout(function() {
-                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-            }, 500)
-        }
-        else if (window.scrollY > 3569 && window.scrollY < 4260) {
-            select5();
-            document.getElementById('col-right3').classList.add('fade-in-top')
-            window.setTimeout(function() {
-                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-            }, 500)
-        }
-        else if (window.scrollY > 4269 && window.scrollY < 4400) {
-            select6();
-            document.getElementById('col-right4').classList.add('fade-in-top')
-            window.setTimeout(function() {
-                document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
-            }, 500)
-        }
+    if (window.pageYOffset >= document.getElementById('page2').offsetTop-25){
+        select2();
+        document.getElementById('col-left').classList.add('fade-in-left')
+        window.setTimeout(function() {
+            document.getElementById('calculator').classList.add('fade-in-bottom')
+        }, 500)
+    }
+    if (window.pageYOffset >= document.getElementById('page3').offsetTop-25) {
+        select3();
+        document.getElementById('col-right').classList.add('fade-in-right')
+        window.setTimeout(function() {
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+        }, 500)
+    }
+    if (window.pageYOffset >= document.getElementById('page4').offsetTop-25) {
+        select4();
+        document.getElementById('col-right2').classList.add('fade-in-bottom')
+        window.setTimeout(function() {
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+        }, 500)
+    }
+    if (window.pageYOffset >= document.getElementById('page5').offsetTop-25) {
+        select5();
+        document.getElementById('col-right3').classList.add('fade-in-top')
+        window.setTimeout(function() {
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+        }, 500)
+    }
+    if (window.pageYOffset >= document.getElementById('page6').offsetTop-25) {
+        select6();
+        document.getElementById('col-right4').classList.add('fade-in-top')
+        window.setTimeout(function() {
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+        }, 500)
     }
 }
 
