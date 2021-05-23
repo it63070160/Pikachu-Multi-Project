@@ -221,13 +221,13 @@ function scrollDown() {
 
 function scrollDown2() {
     scrollCount += 25;
-    if (window.pageYOffset < 950) {
+    if (window.pageYOffset < document.getElementById('page2').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollDown2();
         });
     }
-    else if (window.pageYOffset > 950){
+    else if (window.pageYOffset > document.getElementById('page2').offsetTop){
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp2();
@@ -238,13 +238,13 @@ function scrollDown2() {
 
 function scrollDown3() {
     scrollCount += 25;
-    if (window.pageYOffset < 2100) {
+    if (window.pageYOffset < document.getElementById('page3').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollDown3();
         });
     }
-    else if (window.pageYOffset > 2100){
+    else if (window.pageYOffset > document.getElementById('page3').offsetTop){
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp3();
@@ -255,13 +255,13 @@ function scrollDown3() {
 
 function scrollDown4() {
     scrollCount += 25;
-    if (window.pageYOffset < 3150) {
+    if (window.pageYOffset < document.getElementById('page4').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollDown4();
         });
     }
-    else if (window.pageYOffset > 3150){
+    else if (window.pageYOffset > document.getElementById('page4').offsetTop){
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp4();
@@ -272,13 +272,13 @@ function scrollDown4() {
 
 function scrollDown5() {
     scrollCount += 25;
-    if (window.pageYOffset < 4100) {
+    if (window.pageYOffset < document.getElementById('page5').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollDown5();
         });
     }
-    else if (window.pageYOffset > 4100){
+    else if (window.pageYOffset > document.getElementById('page5').offsetTop){
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp5();
@@ -289,13 +289,13 @@ function scrollDown5() {
 
 function scrollDown6() {
     scrollCount += 25;
-    if (window.pageYOffset < 5050) {
+    if (window.pageYOffset < document.getElementById('page6').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollDown6();
         });
     }
-    else if (window.pageYOffset > 5050){
+    else if (window.pageYOffset > document.getElementById('page6').offsetTop){
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp6();
@@ -306,7 +306,7 @@ function scrollDown6() {
 window.onscroll = function() {
     console.log(document.documentElement.scrollHeight);
     var height = document.documentElement.scrollHeight;
-    if(height >= 6470){
+    if(height >= 6022){
         if (window.scrollY >= 0 && window.scrollY < 1130) {
             select1();
         }
