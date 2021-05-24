@@ -328,8 +328,8 @@ function scrollDown7() {
     if (window.pageYOffset < document.getElementById('page7').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
-            if (window.pageYOffset >= document.getElementById('page7').offsetTop - 1) {
-                window.scrollTo(0, document.getElementById('page7').offsetTop - 1);
+            if (window.pageYOffset >= document.getElementById('page7').offsetTop - 50) {
+                window.scrollTo(0, document.getElementById('page7').offsetTop - 50);
             } else {
                 scrollDown7();
             }
@@ -346,42 +346,42 @@ window.onscroll = function() {
     if (window.pageYOffset >= document.getElementById('container').offsetTop) {
         select1();
     }
-    if (window.pageYOffset >= document.getElementById('page2').offsetTop - 25) {
+    if (window.pageYOffset >= document.getElementById('page2').offsetTop - 50) {
         select2();
         document.getElementById('col-left').classList.add('fade-in-left')
         window.setTimeout(function() {
             document.getElementById('calculator').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page3').offsetTop - 25) {
+    if (window.pageYOffset >= document.getElementById('page3').offsetTop - 50) {
         select3();
         document.getElementById('col-right').classList.add('fade-in-right')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page4').offsetTop - 25) {
+    if (window.pageYOffset >= document.getElementById('page4').offsetTop - 50) {
         select4();
         document.getElementById('col-right2').classList.add('fade-in-bottom')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page5').offsetTop - 25) {
+    if (window.pageYOffset >= document.getElementById('page5').offsetTop - 50) {
         select5();
         document.getElementById('col-right3').classList.add('fade-in-top')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page6').offsetTop - 25) {
+    if (window.pageYOffset >= document.getElementById('page6').offsetTop - 50) {
         select6();
         document.getElementById('col-right4').classList.add('fade-in-top')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page7').offsetTop - 25) {
+    if (window.pageYOffset >= document.getElementById('page7').offsetTop - 50) {
         select7();
         document.getElementById('col-right5').classList.add('fade-in-top')
         window.setTimeout(function() {
@@ -438,6 +438,7 @@ function calculate() {
     document.getElementById("calculated-save").innerHTML = 'ประหยัด: ' + save + unit_save;
 }
 // -- //
+// Image slideshow //
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -456,3 +457,26 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
 }
+// -- //
+// Image zoom //
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("FiT");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// -- //
