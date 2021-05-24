@@ -1058,6 +1058,7 @@ option {
         height: 331px;
         right: 5vw;
         left: 5vw;
+        background-size: 300px 331px;
         background-position: 0px 0px;
     }
 }
@@ -1121,6 +1122,7 @@ option {
         height: 331px;
         right: 5vw;
         left: 5vw;
+        background-size: 300px 331px;
         background-position: 0px 0px;
     }
 }
@@ -1201,6 +1203,7 @@ option {
         height: 531px;
         right: 5vw;
         left: 0vw;
+        background-size: cover;
         background-position: -15px 0px;
     }
 }
