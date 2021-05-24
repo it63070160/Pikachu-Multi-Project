@@ -41,6 +41,12 @@ document.getElementById('p6').addEventListener('click', function() {
         scrollDown6()
     });
 });
+document.getElementById('p7').addEventListener('click', function() {
+    window.requestAnimationFrame(function() {
+        scrollCount = window.pageYOffset;
+        scrollDown7()
+    });
+});
 
 // document.getElementById('scroll-button').addEventListener('click', function() {
 //     window.requestAnimationFrame(function() {
@@ -49,23 +55,24 @@ document.getElementById('p6').addEventListener('click', function() {
 //     });
 // });
 
-function bright(){
+function bright() {
     // Get HTML head element
-    var head = document.getElementsByTagName('HEAD')[0]; 
-  
+    var head = document.getElementsByTagName('HEAD')[0];
+
     // Create new link Element
     var link = document.createElement('link');
 
     // set the attributes for link element 
-    link.rel = 'stylesheet';   
+    link.rel = 'stylesheet';
     link.href = 'style.css';
     // Append link element to HTML head
     head.appendChild(link);
 }
-function dark(){
+
+function dark() {
     // Get HTML head element
-    var head = document.getElementsByTagName('HEAD')[0]; 
-  
+    var head = document.getElementsByTagName('HEAD')[0];
+
     // Create new link Element
     var link = document.createElement('link');
 
@@ -73,56 +80,77 @@ function dark(){
     link.rel = 'stylesheet';
     link.href = 'style_dark.css';
     // Append link element to HTML head
-    head.appendChild(link); 
+    head.appendChild(link);
 }
 
-function select1(){
+function select1() {
     document.getElementById('p1').classList.add('selected-page');
     document.getElementById('p2').classList.remove('selected-page');
     document.getElementById('p3').classList.remove('selected-page');
     document.getElementById('p4').classList.remove('selected-page');
     document.getElementById('p5').classList.remove('selected-page');
     document.getElementById('p6').classList.remove('selected-page');
+    document.getElementById('p7').classList.remove('selected-page');
 }
-function select2(){
+
+function select2() {
     document.getElementById('p1').classList.remove('selected-page');
     document.getElementById('p2').classList.add('selected-page');
     document.getElementById('p3').classList.remove('selected-page');
     document.getElementById('p4').classList.remove('selected-page');
     document.getElementById('p5').classList.remove('selected-page');
     document.getElementById('p6').classList.remove('selected-page');
+    document.getElementById('p7').classList.remove('selected-page');
 }
-function select3(){
+
+function select3() {
     document.getElementById('p1').classList.remove('selected-page');
     document.getElementById('p2').classList.remove('selected-page');
     document.getElementById('p3').classList.add('selected-page');
     document.getElementById('p4').classList.remove('selected-page');
     document.getElementById('p5').classList.remove('selected-page');
     document.getElementById('p6').classList.remove('selected-page');
+    document.getElementById('p7').classList.remove('selected-page');
 }
-function select4(){
+
+function select4() {
     document.getElementById('p1').classList.remove('selected-page');
     document.getElementById('p2').classList.remove('selected-page');
     document.getElementById('p3').classList.remove('selected-page');
     document.getElementById('p4').classList.add('selected-page');
     document.getElementById('p5').classList.remove('selected-page');
     document.getElementById('p6').classList.remove('selected-page');
+    document.getElementById('p7').classList.remove('selected-page');
 }
-function select5(){
+
+function select5() {
     document.getElementById('p1').classList.remove('selected-page');
     document.getElementById('p2').classList.remove('selected-page');
     document.getElementById('p3').classList.remove('selected-page');
     document.getElementById('p4').classList.remove('selected-page');
     document.getElementById('p5').classList.add('selected-page');
     document.getElementById('p6').classList.remove('selected-page');
+    document.getElementById('p7').classList.remove('selected-page');
 }
-function select6(){
+
+function select6() {
     document.getElementById('p1').classList.remove('selected-page');
     document.getElementById('p2').classList.remove('selected-page');
     document.getElementById('p3').classList.remove('selected-page');
     document.getElementById('p4').classList.remove('selected-page');
     document.getElementById('p5').classList.remove('selected-page');
     document.getElementById('p6').classList.add('selected-page');
+    document.getElementById('p7').classList.remove('selected-page');
+}
+
+function select7() {
+    document.getElementById('p1').classList.remove('selected-page');
+    document.getElementById('p2').classList.remove('selected-page');
+    document.getElementById('p3').classList.remove('selected-page');
+    document.getElementById('p4').classList.remove('selected-page');
+    document.getElementById('p5').classList.remove('selected-page');
+    document.getElementById('p6').classList.remove('selected-page');
+    document.getElementById('p7').classList.add('selected-page');
 }
 
 function scrollUp() {
@@ -132,19 +160,17 @@ function scrollUp() {
         window.requestAnimationFrame(function() {
             scrollUp();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollUp1() {
     scrollCount -= 25;
-    if (window.pageYOffset > 0){
+    if (window.pageYOffset > 0) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp1();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollUp2() {
@@ -154,8 +180,7 @@ function scrollUp2() {
         window.requestAnimationFrame(function() {
             scrollUp2();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollUp3() {
@@ -165,8 +190,7 @@ function scrollUp3() {
         window.requestAnimationFrame(function() {
             scrollUp3();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollUp4() {
@@ -176,8 +200,7 @@ function scrollUp4() {
         window.requestAnimationFrame(function() {
             scrollUp4();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollUp5() {
@@ -187,8 +210,7 @@ function scrollUp5() {
         window.requestAnimationFrame(function() {
             scrollUp5();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollUp6() {
@@ -198,8 +220,17 @@ function scrollUp6() {
         window.requestAnimationFrame(function() {
             scrollUp6();
         });
-    }
-    else {}
+    } else {}
+};
+
+function scrollUp7() {
+    scrollCount -= 25;
+    if (window.pageYOffset > document.getElementById('page7').offsetTop) {
+        window.scrollTo(0, scrollCount);
+        window.requestAnimationFrame(function() {
+            scrollUp7();
+        });
+    } else {}
 };
 
 function scrollDown() {
@@ -209,14 +240,12 @@ function scrollDown() {
         window.requestAnimationFrame(function() {
             scrollDown();
         });
-    }
-    else if (window.pageYOffset > document.getElementById('hero').clientHeight){
+    } else if (window.pageYOffset > document.getElementById('hero').clientHeight) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollDown2() {
@@ -226,14 +255,12 @@ function scrollDown2() {
         window.requestAnimationFrame(function() {
             scrollDown2();
         });
-    }
-    else if (window.pageYOffset > document.getElementById('page2').offsetTop){
+    } else if (window.pageYOffset > document.getElementById('page2').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp2();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollDown3() {
@@ -243,14 +270,12 @@ function scrollDown3() {
         window.requestAnimationFrame(function() {
             scrollDown3();
         });
-    }
-    else if (window.pageYOffset > document.getElementById('page3').offsetTop){
+    } else if (window.pageYOffset > document.getElementById('page3').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp3();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollDown4() {
@@ -260,14 +285,12 @@ function scrollDown4() {
         window.requestAnimationFrame(function() {
             scrollDown4();
         });
-    }
-    else if (window.pageYOffset > document.getElementById('page4').offsetTop){
+    } else if (window.pageYOffset > document.getElementById('page4').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp4();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollDown5() {
@@ -277,14 +300,12 @@ function scrollDown5() {
         window.requestAnimationFrame(function() {
             scrollDown5();
         });
-    }
-    else if (window.pageYOffset > document.getElementById('page5').offsetTop){
+    } else if (window.pageYOffset > document.getElementById('page5').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp5();
         });
-    }
-    else {}
+    } else {}
 };
 
 function scrollDown6() {
@@ -292,58 +313,77 @@ function scrollDown6() {
     if (window.pageYOffset < document.getElementById('page6').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
-            if(window.pageYOffset >= document.getElementById('page6').offsetTop-1){
-                window.scrollTo(0, document.getElementById('page6').offsetTop-1);
-            }
-            else{
-                scrollDown6();
-            }
+            scrollDown6();
         });
-    }
-    else if (window.pageYOffset > document.getElementById('page6').offsetTop){
+    } else if (window.pageYOffset > document.getElementById('page6').offsetTop) {
         window.scrollTo(0, scrollCount);
         window.requestAnimationFrame(function() {
             scrollUp6();
         });
-    }
-    else {}
+    } else {}
+};
+
+function scrollDown7() {
+    scrollCount += 25;
+    if (window.pageYOffset < document.getElementById('page7').offsetTop) {
+        window.scrollTo(0, scrollCount);
+        window.requestAnimationFrame(function() {
+            if (window.pageYOffset >= document.getElementById('page7').offsetTop - 1) {
+                window.scrollTo(0, document.getElementById('page7').offsetTop - 1);
+            } else {
+                scrollDown7();
+            }
+        });
+    } else if (window.pageYOffset > document.getElementById('page7').offsetTop) {
+        window.scrollTo(0, scrollCount);
+        window.requestAnimationFrame(function() {
+            scrollUp7();
+        });
+    } else {}
 };
 window.onscroll = function() {
     // console.log(window.pageYOffset+" "+document.getElementById('page6').offsetTop);
     if (window.pageYOffset >= document.getElementById('container').offsetTop) {
         select1();
     }
-    if (window.pageYOffset >= document.getElementById('page2').offsetTop-25){
+    if (window.pageYOffset >= document.getElementById('page2').offsetTop - 25) {
         select2();
         document.getElementById('col-left').classList.add('fade-in-left')
         window.setTimeout(function() {
             document.getElementById('calculator').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page3').offsetTop-25) {
+    if (window.pageYOffset >= document.getElementById('page3').offsetTop - 25) {
         select3();
         document.getElementById('col-right').classList.add('fade-in-right')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page4').offsetTop-25) {
+    if (window.pageYOffset >= document.getElementById('page4').offsetTop - 25) {
         select4();
         document.getElementById('col-right2').classList.add('fade-in-bottom')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page5').offsetTop-25) {
+    if (window.pageYOffset >= document.getElementById('page5').offsetTop - 25) {
         select5();
         document.getElementById('col-right3').classList.add('fade-in-top')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
     }
-    if (window.pageYOffset >= document.getElementById('page6').offsetTop-25) {
+    if (window.pageYOffset >= document.getElementById('page6').offsetTop - 25) {
         select6();
         document.getElementById('col-right4').classList.add('fade-in-top')
+        window.setTimeout(function() {
+            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+        }, 500)
+    }
+    if (window.pageYOffset >= document.getElementById('page7').offsetTop - 25) {
+        select7();
+        document.getElementById('col-right5').classList.add('fade-in-top')
         window.setTimeout(function() {
             document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
         }, 500)
@@ -353,44 +393,45 @@ window.onscroll = function() {
 // Calculator
 document.getElementById("size").disabled = true;
 document.getElementById("selector-cal").disabled = true;
-function select(){
+
+function select() {
     var selected = document.getElementById("selector-cal").value;
     var choose = 0;
-    if(selected=="house"){
+    if (selected == "house") {
         choose = 0;
     }
     return choose;
 }
-function sizechange(){
+
+function sizechange() {
     var amount = document.getElementById("amount").value;
-    num_amount =  parseInt(amount);
+    num_amount = parseInt(amount);
     choose = select();
-    if(choose == 0){
-        document.getElementById("size").value = 1.5*num_amount;
+    if (choose == 0) {
+        document.getElementById("size").value = 1.5 * num_amount;
     }
 }
-function calculate(){
+
+function calculate() {
     var size = document.getElementById("size").value;
     var amount = document.getElementById("amount").value;
     choose = select();
-    num_size =  parseFloat(size);
-    num_amount =  parseInt(amount);
-    if(choose == 0){
-        var fund = 60000*num_amount;
-        var save = 10403*num_amount;
+    num_size = parseFloat(size);
+    num_amount = parseInt(amount);
+    if (choose == 0) {
+        var fund = 60000 * num_amount;
+        var save = 10403 * num_amount;
     }
-    if (save>999999){
+    if (save > 999999) {
         save /= 1000000;
         var unit_save = ' ล้านบาท/ปี';
-    }
-    else{
+    } else {
         var unit_save = ' บาท/ปี';
     }
-    if (fund>999999){
+    if (fund > 999999) {
         fund /= 1000000;
         var unit_fund = ' ล้านบาท';
-    }
-    else{
+    } else {
         var unit_fund = ' บาท';
     }
     document.getElementById("calculated-fund").innerHTML = 'ต้นทุน: ' + fund + unit_fund;
@@ -402,16 +443,16 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
 }
