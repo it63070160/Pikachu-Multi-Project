@@ -491,7 +491,6 @@ button:hover {
     }
 }
 
-
 /* css animation text */
 
 .rw-sentence>.rw-words.rw-words-1>span {
@@ -921,6 +920,7 @@ option {
     background-position: -16px 0px;
     background-repeat: no-repeat;
     border: 2px solid #fff;
+    opacity: 0;
 }
 
 /* The Modal (background) */
