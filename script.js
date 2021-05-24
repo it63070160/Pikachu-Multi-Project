@@ -371,7 +371,7 @@ window.onscroll = function() {
         select5();
         document.getElementById('col-right3').classList.add('fade-in-top')
         window.setTimeout(function() {
-            document.getElementById('col-left-overlay').classList.add('fade-in-bottom')
+            document.getElementById('imgfade').classList.add('fade-in-bottom')
         }, 500)
     }
     if (window.pageYOffset >= document.getElementById('page6').offsetTop - 50) {
