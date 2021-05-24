@@ -30,20 +30,27 @@ h2 {
     margin-bottom: 1rem;
 }
 
+
 /* Slideshow container */
+
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
-  }
-  
+}
+
+
 /* Hide the images by default */
+
 .mySlides {
     display: none;
 }
 
+
 /* Next & previous buttons */
-.prev, .next {
+
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -56,30 +63,39 @@ h2 {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
+
 /* Position the "next button" to the right */
+
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
+
 /* Fading animation */
+
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
+
 
 /* ปุ่มทั้งหลาย */
 
 button {
-    font-family: 'Chonburi', cursive;
+    font-family: 'Kanit', sans-serif;
     font-size: 1rem;
     border-radius: 20px;
     border: 2px solid #ffcc29;
@@ -125,8 +141,8 @@ button:hover {
     cursor: pointer;
     border-radius: 100%;
     position: fixed;
-    top:2%;
-    left:1%;
+    top: 2%;
+    left: 1%;
     z-index: 2;
 }
 
@@ -266,6 +282,10 @@ button:hover {
 
 #page6 {
     background-image: linear-gradient(to top right, #01072C, black);
+}
+
+#page7 {
+    background-image: linear-gradient(to bottom right, #01072C, black);
 }
 
 
@@ -530,7 +550,7 @@ button:hover {
     height: 200px;
     background-color: #f58634;
     border-radius: 100%;
-    position:absolute;
+    position: absolute;
     bottom: -335%;
     left: -5%;
     z-index: 1;
@@ -541,7 +561,7 @@ button:hover {
     height: 200px;
     background-color: rgb(69, 164, 177);
     border-radius: 100%;
-    position:absolute;
+    position: absolute;
     bottom: -435%;
     right: -5%;
     z-index: 1;
@@ -552,7 +572,7 @@ button:hover {
     height: 200px;
     background-color: #f58634;
     border-radius: 100%;
-    position:absolute;
+    position: absolute;
     bottom: -550%;
     left: -5%;
     z-index: 1;
@@ -792,6 +812,7 @@ option {
     background-image: url(./pics/bulb_night_long.svg);
     background-repeat: no-repeat;
 }
+
 .bulb2 {
     position: absolute;
     width: 500px;
@@ -801,6 +822,7 @@ option {
     background-image: url(./pics/bulb_night.svg);
     background-repeat: no-repeat;
 }
+
 .bulb3 {
     position: fixed;
     width: 500px;
@@ -843,10 +865,10 @@ option {
 
 @media (min-width: 800px) {
     h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
     .rw-words2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .solar-house {
         width: 600px;
@@ -865,32 +887,32 @@ option {
         justify-content: center;
         left: 5%;
     }
-    .ooo2{
+    .ooo2 {
         bottom: -150%;
     }
-    .ooo3{
+    .ooo3 {
         bottom: -270%;
     }
-    .ooo4{
+    .ooo4 {
         bottom: -373%;
     }
-    .ooo5{
+    .ooo5 {
         bottom: -474%;
     }
 }
 
 @media (min-width: 1366px) {
     h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     h1 {
-        font-size: 4rem;
+        font-size: 4.2rem;
     }
     .rw-words2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .fa-angle-double-down {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .section {
         flex-flow: row;
@@ -920,23 +942,23 @@ option {
         top: 35.5%;
         left: 47.5%;
     }
-    .ooo2{
+    .ooo2 {
         bottom: -108%;
     }
-    .ooo3{
+    .ooo3 {
         bottom: -217%;
     }
-    .ooo4{
+    .ooo4 {
         bottom: -319%;
     }
-    .ooo5{
+    .ooo5 {
         bottom: -419%;
     }
 }
 
 @media (min-width: 1600px) {
     .fa-angle-double-down {
-        font-size: 3rem;
+        font-size: 3.2rem;
     }
     .solar-house {
         width: 900px;
@@ -947,16 +969,16 @@ option {
     .calculator {
         left: -7%;
     }
-    .ooo2{
+    .ooo2 {
         bottom: -111%;
     }
-    .ooo3{
+    .ooo3 {
         bottom: -211%;
     }
-    .ooo4{
+    .ooo4 {
         bottom: -315%;
     }
-    .ooo5{
+    .ooo5 {
         bottom: -415%;
     }
 }
@@ -971,16 +993,16 @@ option {
     .calculator {
         left: -12%;
     }
-    .ooo2{
+    .ooo2 {
         bottom: -108%;
     }
-    .ooo3{
+    .ooo3 {
         bottom: -209%;
     }
-    .ooo4{
+    .ooo4 {
         bottom: -309%;
     }
-    .ooo5{
+    .ooo5 {
         bottom: -410%;
     }
 }
