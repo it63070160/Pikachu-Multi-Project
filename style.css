@@ -926,6 +926,7 @@ option {
     background-position: -16px 0px;
     background-repeat: no-repeat;
     border: 2px solid #000;
+    opacity: 0;
 }
 
 /* The Modal (background) */
